@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <section class="px-5 min-h-screen bg-veryDarkBlue grid place-items-center">
+
+    <!-- Rating state start -->
+    <div id="rating-container"
+      class="max-w-sm bg-gradient-to-b from-darkBlue-400 to-darkBlue-600 rounded-2xl p-6 bg-white">
+      <span class="rounded-full grid place-items-center bg-darkBlue-200 w-10 h-10 inline-block mb-6">
+        <img src="./images/icon-star.svg" alt="Star Icon">
+      </span>
+      <p class="mb-2.5 font-bold text-xl text-white">How did we do?</p>
+      <p class="mb-4 text-lightGrey text-sm">
+        Please let us know how we did with your support request. All feedback is appreciated to
+        help us improve our offering!
+      </p>
+      <div class="mb-7 flex justify-between">
+        <div class="relative">
+          <input type="radio" name="rating" value="1" id="rating1" class="sr-only peer">
+          <label for="rating1"
+            class="cursor-pointer inline-grid place-items-center w-10 h-10 rounded-full bg-darkBlue-200 text-lightGrey hover:bg-lightGrey hover:text-white peer-checked:bg-orange-500 peer-checked:text-white"
+            for="">1</label>
+        </div>
+        <div class="relative">
+          <input type="radio" name="rating" value="2" id="rating2" class="sr-only peer">
+          <label for="rating2"
+            class="cursor-pointer inline-grid place-items-center w-10 h-10 rounded-full bg-darkBlue-200 text-lightGrey hover:bg-lightGrey hover:text-white peer-checked:bg-orange-500 peer-checked:text-white"
+            for="">2</label>
+        </div>
+        <div class="relative">
+          <input type="radio" name="rating" value="3" id="rating3" class="sr-only peer">
+          <label for="rating3"
+            class="cursor-pointer inline-grid place-items-center w-10 h-10 rounded-full bg-darkBlue-200 text-lightGrey hover:bg-lightGrey hover:text-white peer-checked:bg-orange-500 peer-checked:text-white"
+            for="">3</label>
+        </div>
+        <div class="relative">
+          <input type="radio" name="rating" value="4" id="rating4" class="sr-only peer">
+          <label for="rating4"
+            class="cursor-pointer inline-grid place-items-center w-10 h-10 rounded-full bg-darkBlue-200 text-lightGrey hover:bg-lightGrey hover:text-white peer-checked:bg-orange-500 peer-checked:text-white"
+            for="">4</label>
+        </div>
+        <div class="relative">
+          <input type="radio" name="rating" value="5" id="rating5" class="sr-only peer">
+          <label for="rating5"
+            class="cursor-pointer inline-grid place-items-center w-10 h-10 rounded-full bg-darkBlue-200 text-lightGrey hover:bg-lightGrey hover:text-white peer-checked:bg-orange-500 peer-checked:text-white"
+            for="">5</label>
+        </div>
+      </div>
+      <button id="submit"
+        class="font-medium w-full rounded-full py-2 text-sm uppercase text-white bg-orange-500 active:bg-white active:text-orange-500">Submit</button>
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div id="thank-you"
+      class="hidden max-w-sm bg-gradient-to-b from-darkBlue-400 to-darkBlue-600 rounded-2xl px-6 py-8 bg-white">
+      <img class="mb-7 block mx-auto" src="./images/illustration-thank-you.svg" alt="Thank You Illustration">
+      <span class="w-fit mx-auto text-sm text-orange-400 bg-darkBlue-200 px-4 pt-1.5 pb-1 rounded-full block mb-7">
+        You selected<span id="selected-rating" class="mx-1">4</span>out of 5
+      </span>
+      <p class="mb-3 text-center text-white text-xl font-bold">Thank you!</p>
+      <p class="text-center text-lightGrey text-sm">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+    <!-- Thank you state end -->
+
+  </section>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
